@@ -32,6 +32,11 @@ const StyledHeader = styled.h5`
         font-size: 20px;
         padding: 0;
     }
+    @media(max-width: 375px){
+      &:first-of-type{
+        margin-top: 180px;
+      }
+    }
 `;
 
 const StyledButton = styled.button`

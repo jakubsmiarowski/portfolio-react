@@ -135,6 +135,9 @@ const StyledImage = styled.img`
     -moz-box-shadow: 0px 0px 12px -1px rgba(52, 73, 94, 0.45);
     box-shadow: 0px 0px 12px -1px rgba(52, 73, 94, 0.45);
     transition: 0.5s;
+    @media(max-width: 425px){
+      height: auto;
+    }
 `;
 
 

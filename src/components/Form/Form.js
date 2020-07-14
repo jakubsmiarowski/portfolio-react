@@ -33,6 +33,13 @@ const StyledForm = styled.form`
             vertical-align: bottom;
         }
     }
+    @media(max-width: 425px){
+        div{
+            input, textarea{
+            width: 280px;
+            }
+        }
+    }
 `;
 const StyledButton = styled.button`
     margin-top: 40px;

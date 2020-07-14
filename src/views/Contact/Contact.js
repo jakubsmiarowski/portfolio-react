@@ -57,6 +57,9 @@ const StyledContactSpan = styled.span`
             border-radius: 4px;
         }
     }
+    @media(max-width: 425px){
+        margin: 0 16px;
+    }
 `;
 const StyledLink = styled.a`
   text-decoration: none;

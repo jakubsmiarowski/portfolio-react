@@ -68,6 +68,9 @@ const StyledMenuLinks = styled.div`
 const StyledUl = styled.ul`
     margin: 0 0 100px;
     padding: 0;
+    @media(max-width: 375px){
+      margin-bottom: 50px;
+    }
 `;
 const StyledLi = styled.li`
     list-style: none;
@@ -78,6 +81,10 @@ const StyledLi = styled.li`
     overflow: hidden;
     @media(max-width: 575px){
       font-size: 5rem;
+    }
+    @media(max-width: 375px){
+      font-size: 4rem;
+      height: auto;
     }
 `;
 const StyledLink = styled(Link)`
@@ -97,6 +104,9 @@ const StyledHeader = styled.h3`
     font-size: 1.2rem;
     margin: 8px auto;
     text-align: left;
+    @media(max-width: 375px){
+      font-size: 1rem;
+    }
 `;
 
 
