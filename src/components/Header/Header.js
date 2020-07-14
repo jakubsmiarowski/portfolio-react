@@ -94,7 +94,7 @@ const Header = ({history}) => {
   
   return (
     <StyledContainer>
-      <StyledLink to='/home'>JAKUBŚMIAROWSKI.</StyledLink>
+      <StyledLink to='/'>JAKUBŚMIAROWSKI.</StyledLink>
       <StyledButton disabled={disabled} onClick={handleMenu}>{state.menuName}</StyledButton>
       <Menu state={state} />
     </StyledContainer>
