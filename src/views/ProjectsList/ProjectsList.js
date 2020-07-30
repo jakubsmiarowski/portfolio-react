@@ -43,7 +43,18 @@ const projects = [
 const StyledContainer = styled.div`
   margin-top: 150px;
 `;
+const StyledHr = styled.hr`
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  background: black;
+  border: none;
+  border-radius: 3%;
+`;
 const StyledParagraph = styled.p`
+  margin-top: 30px;
+  color: #34495e;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -137,6 +148,7 @@ function ProjectsList() {
 
   return (
     <StyledContainer id="projects">
+      <StyledHr></StyledHr>
       <StyledParagraph>
         These are some of the projects I worked on
       </StyledParagraph>

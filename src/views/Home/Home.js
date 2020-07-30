@@ -28,7 +28,7 @@ const StyledContainer = styled.div`
   }
 `;
 const StyledWrapper = styled.div`
-  margin-bottom: 250px;
+  margin-bottom: 320px;
 `;
 
 const StyledHeader = styled.h5`

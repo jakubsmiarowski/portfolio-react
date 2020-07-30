@@ -85,7 +85,7 @@ const about = [
   },
   {
     id: 23,
-    text: "23. My dream? Being able to work an travel",
+    text: "23. My dream? Being able to work and travel",
     emoji: "\u{2708}",
   },
   { id: 24, text: "24. I hope to meet you", emoji: "\u{1F44B}" },
@@ -95,12 +95,23 @@ const about = [
 const StyledContainer = styled.div`
   margin-top: 150px;
 `;
+const StyledHr = styled.hr`
+  display: block;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  background: black;
+  border: none;
+  border-radius: 3%;
+`;
 const StyledParagraph = styled.p`
+  margin-top: 30px;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
+  color: #34495e;
 `;
 const StyledUl = styled.ul`
   list-style: none;
@@ -108,6 +119,7 @@ const StyledUl = styled.ul`
   margin: 50px 0;
 `;
 const StyledLi = styled.li`
+  color: #34495e;
   font-size: 1.2rem;
   margin: 4px 0;
   @media (max-width: 1280px) {
@@ -156,6 +168,7 @@ function About() {
 
   return (
     <StyledContainer id="about">
+      <StyledHr></StyledHr>
       <StyledParagraph>
         List of Relevant Facts About Me That May Or May Not Make You Wish We Had
         a Beer

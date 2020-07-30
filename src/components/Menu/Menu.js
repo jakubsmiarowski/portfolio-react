@@ -54,24 +54,9 @@ const StyledMenu = styled.nav`
 const Menu = ({ open }) => {
   return (
     <StyledMenu open={open}>
-      <Link to="/projects">
-        <span role="img" aria-label="about us">
-          💁🏻‍♂️
-        </span>
-        Projects
-      </Link>
-      <Link to="/about">
-        <span role="img" aria-label="price">
-          💸
-        </span>
-        About
-      </Link>
-      <Link to="/Contact">
-        <span role="img" aria-label="contact">
-          📩
-        </span>
-        Contact
-      </Link>
+      <Link to="/projects">Projects</Link>
+      <Link to="/about">About</Link>
+      <Link to="/Contact">Contact</Link>
     </StyledMenu>
   );
 };
