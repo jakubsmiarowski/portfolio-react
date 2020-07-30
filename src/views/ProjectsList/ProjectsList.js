@@ -40,9 +40,7 @@ const projects = [
   },
 ];
 
-const StyledContainer = styled.div`
-  margin-top: 150px;
-`;
+const StyledContainer = styled.div``;
 const StyledHr = styled.hr`
   display: block;
   width: 100px;

@@ -31,13 +31,17 @@ const StyledContainer = styled.div`
   }
 `;
 const StyledWrapper = styled.div`
-  margin-bottom: 320px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 `;
 
 const StyledHeader = styled.h5`
   font-size: 24px;
   font-weight: 400;
   padding-right: 200px;
+  text-align: left;
   margin: 10px 0;
   line-height: 40px;
   &:first-of-type {

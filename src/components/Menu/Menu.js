@@ -11,7 +11,6 @@ import {
 } from "../Animations/Animations";
 
 const StyledMenu = styled.nav`
-  display: flex;
   flex-direction: column;
   justify-content: center;
   background: #bdc3c7;
@@ -25,7 +24,11 @@ const StyledMenu = styled.nav`
   z-index: 10;
   overflow: ${({ open }) => (open ? "hidden" : "auto")};
   transition: transform 0.3s ease-in-out;
+  display: none;
 
+  @media (max-width: 425px) {
+    display: flex;
+  }
   @media (max-width: 576px) {
     width: 100%;
   }

@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-//import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Menu from "../Menu/Menu";
 import Burger from "../Burger/Burger";
@@ -13,6 +12,7 @@ const StyledContainer = styled.div`
   height: 100px;
   z-index: 999;
   padding: 0 400px;
+  overflow: ${({ open }) => (open ? "hidden" : "auto")};
   @media (max-width: 1440px) {
     padding: 0 200px;
   }
@@ -50,6 +50,10 @@ const StyledLi = styled.li`
 const StyledDiv = styled.div`
   margin: 0;
   padding: 0;
+  display: none;
+  @media (max-width: 425px) {
+    display: block;
+  }
 `;
 
 const StyledLink = styled(AnchorLink)`
