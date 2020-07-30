@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
 
 import {
@@ -15,15 +15,15 @@ const StyledMenu = styled.nav`
   flex-direction: column;
   justify-content: center;
   background: #bdc3c7;
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ open }) => (open ? "translateX(10%)" : "translateX(100%)")};
   height: 100vh;
-  text-align: left;
+  text-align: center;
   padding: 2rem;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 10;
-  overflow: hidden;
+  overflow: ${({ open }) => (open ? "hidden" : "auto")};
   transition: transform 0.3s ease-in-out;
 
   @media (max-width: 576px) {
@@ -44,19 +44,21 @@ const StyledMenu = styled.nav`
       font-size: 1.5rem;
       text-align: center;
     }
-
-    &:hover {
-      color: #343078;
-    }
   }
 `;
 
-const Menu = ({ open }) => {
+const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <Link to="/projects">Projects</Link>
-      <Link to="/about">About</Link>
-      <Link to="/Contact">Contact</Link>
+      <AnchorLink href="#projects" onClick={() => setOpen(!open)}>
+        Projects
+      </AnchorLink>
+      <AnchorLink href="#about" onClick={() => setOpen(!open)}>
+        About
+      </AnchorLink>
+      <AnchorLink href="#Contact" onClick={() => setOpen(!open)}>
+        Contact
+      </AnchorLink>
     </StyledMenu>
   );
 };

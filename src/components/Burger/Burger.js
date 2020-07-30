@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledBurger = styled.button`
   position: absolute;
   top: 4%;
-  right: 7rem;
+  right: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -15,6 +15,9 @@ const StyledBurger = styled.button`
   cursor: pointer;
   padding: 0;
   z-index: 11;
+  @media (max-width: 320px) {
+    right: 2rem;
+  }
 
   &:focus {
     outline: none;
@@ -28,7 +31,7 @@ const StyledBurger = styled.button`
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;
-
+    display: none;
     :first-child {
       transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
     }
@@ -40,6 +43,9 @@ const StyledBurger = styled.button`
 
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+    @media (max-width: 435px) {
+      display: block;
     }
   }
 `;

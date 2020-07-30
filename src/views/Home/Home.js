@@ -23,8 +23,11 @@ const StyledContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0 100px;
   }
-  @media (max-width: 575px) {
-    padding: 0 100px;
+  @media (max-width: 425px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 320px) {
+    padding: 0 25px;
   }
 `;
 const StyledWrapper = styled.div`

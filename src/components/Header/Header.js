@@ -22,8 +22,11 @@ const StyledContainer = styled.div`
   @media (max-width: 768px) {
     padding: 0 100px;
   }
-  @media (max-width: 575px) {
-    padding: 0 100px;
+  @media (max-width: 425px) {
+    padding: 0 50px;
+  }
+  @media (max-width: 320px) {
+    padding: 0 25px;
   }
 `;
 
@@ -31,6 +34,9 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
+  @media (max-width: 425px) {
+    display: none;
+  }
 `;
 
 const StyledLi = styled.li`
@@ -72,10 +78,10 @@ const Header = () => {
           <StyledLink href="#contact">Contact</StyledLink>
         </StyledLi>
       </StyledUl>
-      {/*<StyledDiv ref={node}>
+      <StyledDiv ref={node}>
         <Burger open={open} setOpen={setOpen} />
         <Menu open={open} setOpen={setOpen} />
-      </StyledDiv>*/}
+      </StyledDiv>
     </StyledContainer>
   );
 };
