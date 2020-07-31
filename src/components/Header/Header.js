@@ -12,7 +12,7 @@ const StyledContainer = styled.div`
   height: 100px;
   z-index: 999;
   padding: 0 400px;
-  overflow: ${({ open }) => (open ? "hidden" : "auto")};
+  overflow: hidden;
   @media (max-width: 1440px) {
     padding: 0 200px;
   }
@@ -73,10 +73,10 @@ const Header = () => {
       <StyledLink to="/">JAKUBŚMIAROWSKI.</StyledLink>
       <StyledUl>
         <StyledLi>
-          <StyledLink href="#projects">Projects</StyledLink>
+          <StyledLink href="#about">About</StyledLink>
         </StyledLi>
         <StyledLi>
-          <StyledLink href="#about">About</StyledLink>
+          <StyledLink href="#projects">Projects</StyledLink>
         </StyledLi>
         <StyledLi>
           <StyledLink href="#contact">Contact</StyledLink>

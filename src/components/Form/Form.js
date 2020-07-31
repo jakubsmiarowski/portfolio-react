@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const StyledForm = styled.form`
   display: flex;
@@ -62,6 +64,8 @@ const StyledButton = styled.button`
   }
 `;
 
+toast.configure();
+
 const Form = () => {
   //State for each input
   const [inputName, setInputName] = useState("");
@@ -96,10 +100,27 @@ const Form = () => {
       .then(
         (result) => {
           console.log(result.text);
-          alert("The message was sent");
+          toast.info("Thank you for your message!", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         },
         (error) => {
           console.log(error.text);
+          toast.error("Something went wrong, please try again later :(", {
+            position: "bottom-center",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         }
       );
 

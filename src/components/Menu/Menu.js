@@ -53,13 +53,13 @@ const StyledMenu = styled.nav`
 const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu open={open}>
-      <AnchorLink href="#projects" onClick={() => setOpen(!open)}>
-        Projects
-      </AnchorLink>
       <AnchorLink href="#about" onClick={() => setOpen(!open)}>
         About
       </AnchorLink>
-      <AnchorLink href="#Contact" onClick={() => setOpen(!open)}>
+      <AnchorLink href="#projects" onClick={() => setOpen(!open)}>
+        Projects
+      </AnchorLink>
+      <AnchorLink href="#contact" onClick={() => setOpen(!open)}>
         Contact
       </AnchorLink>
     </StyledMenu>
