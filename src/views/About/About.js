@@ -92,9 +92,7 @@ const about = [
   { id: 25, text: "25. And have a fantastic day!", emoji: "\u{1F609}" },
 ];
 
-const StyledContainer = styled.div`
-  margin-top: 150px;
-`;
+const StyledContainer = styled.div``;
 const StyledHr = styled.hr`
   display: block;
   width: 100px;
@@ -120,7 +118,7 @@ const StyledUl = styled.ul`
 `;
 const StyledLi = styled.li`
   color: #34495e;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 4px 0;
   @media (max-width: 1280px) {
     font-size: 0.8rem;

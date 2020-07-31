@@ -40,7 +40,9 @@ const projects = [
   },
 ];
 
-const StyledContainer = styled.div``;
+const StyledContainer = styled.div`
+  margin-top: 150px;
+`;
 const StyledHr = styled.hr`
   display: block;
   width: 100px;
@@ -71,6 +73,7 @@ const StyledProjectsContainer = styled.div`
 const StyledProject = styled.div`
   position: relative;
   height: 100%;
+
   .overlay {
     transition: 0.5s;
   }

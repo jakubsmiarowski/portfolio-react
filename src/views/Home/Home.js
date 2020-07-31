@@ -112,8 +112,8 @@ function Home() {
           <StyledButton ref={(el) => (button = el)}>Resume.pdf</StyledButton>
         </a>
       </StyledWrapper>
-      <ProjectsList />
       <About />
+      <ProjectsList />
       <Contact />
     </StyledContainer>
   );
