@@ -165,7 +165,7 @@ function About() {
   });
 
   return (
-    <StyledContainer id="about">
+    <StyledContainer id="about" className="section">
       <StyledHr></StyledHr>
       <StyledParagraph>
         List of Relevant Facts About Me That May Or May Not Make You Wish We Had

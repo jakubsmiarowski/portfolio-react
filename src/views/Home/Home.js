@@ -6,6 +6,8 @@ import {
   reavealButton,
   reavealEmoji,
 } from "../../components/Animations/Animations";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import About from "../About/About";
 import ProjectsList from "../ProjectsList/ProjectsList";
@@ -84,6 +86,8 @@ const StyledHeaderEmoji = styled.div`
   font-size: 20px;
 `;
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Home() {
   let line1 = useRef(null);
 
@@ -94,6 +98,29 @@ function Home() {
     revealTextHome(line1);
     reavealButton(button);
     reavealEmoji(emoji);
+  });
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(".section");
+    console.log(sections);
+    sections.forEach((section) => {
+      gsap.fromTo(
+        section.children,
+        { y: "+=100", opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.2,
+          duration: 1,
+          ease: "easeInOut",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 70%",
+            // scrub: 1,
+          },
+        }
+      );
+    });
   });
 
   return (

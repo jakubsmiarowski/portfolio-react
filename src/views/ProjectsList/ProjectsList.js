@@ -148,7 +148,7 @@ function ProjectsList() {
   });
 
   return (
-    <StyledContainer id="projects">
+    <StyledContainer id="projects" className="section">
       <StyledHr></StyledHr>
       <StyledParagraph>
         These are some of the projects I worked on

@@ -1,14 +1,6 @@
-import React, { useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import React from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import styled from "styled-components";
-
-import {
-  staggerText,
-  staggerReveal,
-  fadeInUp,
-  staggerRevealClose,
-} from "../Animations/Animations";
 
 const StyledMenu = styled.nav`
   flex-direction: column;

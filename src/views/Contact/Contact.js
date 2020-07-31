@@ -90,28 +90,28 @@ const socials = [
 
 const Contact = () => {
   //Dom node for animation
-  let form = useRef(null);
+  // let form = useRef(null);
 
-  useEffect(() => {
-    reavealProjects(form);
-  });
+  // useEffect(() => {
+  //   reavealProjects(form);
+  // });
 
   return (
     <StyledContainer id="contact">
       <StyledHr></StyledHr>
       <StyledParagraph>Want to get in touch? Shoot me an email</StyledParagraph>
-      <div ref={(el) => (form = el)}>
+      <div className="section">
         <Form />
         <StyledContactInfo>
           <StyledParagraph>Or let me know here:</StyledParagraph>
-          {socials.map((item) => (
-            <StyledContactSpan>
+          {socials.map((social) => (
+            <StyledContactSpan key={social.item}>
               <StyledLink
-                href={item.link}
+                href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <FontAwesomeIcon icon={item.icon} />
+                <FontAwesomeIcon icon={social.icon} />
               </StyledLink>
             </StyledContactSpan>
           ))}
