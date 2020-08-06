@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledBurger = styled.button`
   position: absolute;
-  top: 3%;
+  top: 4%;
   right: 3rem;
   display: flex;
   flex-direction: column;
@@ -44,7 +44,7 @@ const StyledBurger = styled.button`
     :nth-child(3) {
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
-    @media (max-width: 435px) {
+    @media (max-width: 500px) {
       display: block;
     }
   }

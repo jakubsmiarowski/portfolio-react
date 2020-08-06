@@ -8,6 +8,11 @@ import {
 } from "../../components/Animations/Animations";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/fontawesome-free-solid";
 
 import About from "../About/About";
 import ProjectsList from "../ProjectsList/ProjectsList";
@@ -20,11 +25,9 @@ const StyledContainer = styled.div`
     padding: 0 200px;
   }
   @media (max-width: 1024px) {
-    padding: 0 150px;
-  }
-  @media (max-width: 768px) {
     padding: 0 100px;
   }
+
   @media (max-width: 425px) {
     padding: 0 50px;
   }
@@ -65,7 +68,11 @@ const StyledHeader = styled.h5`
     }
   }
 `;
-
+const StyledLink = styled.a`
+  width: 100px;
+  height: 50px;
+  margin-top: 50px;
+`;
 const StyledButton = styled.button`
   padding: 15px 40px;
   font-weight: bold;
@@ -73,17 +80,31 @@ const StyledButton = styled.button`
   border-radius: 20px;
   background-color: #2c3e50;
   color: white;
-  float: right;
+  float: left;
   cursor: pointer;
   outline: none;
-  @media (max-width: 800px) {
-    float: left;
-    margin-top: 20px;
-  }
 `;
 const StyledHeaderEmoji = styled.div`
   margin-right: 5px;
   font-size: 20px;
+`;
+const StyledFixedDiv = styled.div`
+  position: fixed;
+  top: 50%;
+  right: 200px;
+  transform: rotate(-90deg);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1.5px;
+  mix-blend-mode: difference;
+  z-index: 8;
+  @media (max-width: 1440px) {
+    right: -12px;
+  }
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
 gsap.registerPlugin(ScrollTrigger);
@@ -101,25 +122,80 @@ function Home() {
   });
 
   useEffect(() => {
-    const sections = document.querySelectorAll(".section");
-    console.log(sections);
-    sections.forEach((section) => {
-      gsap.fromTo(
-        section.children,
-        { y: "+=100", opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          stagger: 0.2,
-          duration: 1,
-          ease: "easeInOut",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 70%",
-            // scrub: 1,
-          },
-        }
-      );
+    const list = document.querySelectorAll("#list");
+    const photo = document.getElementById("photo");
+    const projects = document.querySelectorAll("#project");
+    const form = document.getElementById("contact-form");
+    const socials = document.querySelectorAll("#socials");
+    console.log(list);
+
+    list.forEach((item) => {
+      gsap.from(item, {
+        duration: 0.9,
+        opacity: 0,
+        delay: 1,
+        ease: "power3.out",
+        x: -64,
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+        },
+      });
+    });
+    gsap.from(photo, {
+      duration: 0.9,
+      opacity: 0,
+      delay: 0.9,
+      ease: "power3.out",
+      x: 64,
+      // stagger: {
+      //   amount: 0.15,
+      // },
+      scrollTrigger: {
+        trigger: photo,
+        start: "top 90%",
+      },
+    });
+    projects.forEach((item) => {
+      gsap.from(item, {
+        duration: 0.9,
+        opacity: 0,
+        delay: 0.9,
+        ease: "power3.out",
+        y: 64,
+        stagger: {
+          amount: 0.15,
+        },
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+        },
+      });
+    });
+    gsap.from(form, {
+      duration: 0.9,
+      opacity: 0,
+      delay: 0.5,
+      ease: "power3.out",
+      y: 64,
+      stagger: {
+        amount: 0.15,
+      },
+      scrollTrigger: {
+        trigger: form,
+        start: "top bottom",
+      },
+    });
+    gsap.from(socials, {
+      duration: 0.9,
+      opacity: 0,
+      delay: 0.8,
+      ease: "power3.out",
+      x: -64,
+      scrollTrigger: {
+        trigger: socials,
+        start: "top bottom",
+      },
     });
   });
 
@@ -135,10 +211,16 @@ function Home() {
           &#127745; &#127754; &#128187; &#128247; &#127947; &#128692; &#128509;
           &#128526;
         </StyledHeaderEmoji>
-        <a href={cvKuba} target="_blank" rel="noopener noreferrer">
+        <StyledLink href={cvKuba} target="_blank" rel="noopener noreferrer">
           <StyledButton ref={(el) => (button = el)}>Resume.pdf</StyledButton>
-        </a>
+        </StyledLink>
       </StyledWrapper>
+      <StyledFixedDiv>
+        <span>
+          <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon> scroll down{" "}
+          <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
+        </span>
+      </StyledFixedDiv>
       <About />
       <ProjectsList />
       <Contact />

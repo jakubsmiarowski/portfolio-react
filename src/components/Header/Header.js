@@ -17,11 +17,9 @@ const StyledContainer = styled.div`
     padding: 0 200px;
   }
   @media (max-width: 1024px) {
-    padding: 0 150px;
-  }
-  @media (max-width: 768px) {
     padding: 0 100px;
   }
+
   @media (max-width: 425px) {
     padding: 0 50px;
   }
@@ -34,7 +32,7 @@ const StyledUl = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `;
@@ -51,7 +49,7 @@ const StyledDiv = styled.div`
   margin: 0;
   padding: 0;
   display: none;
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     display: block;
   }
 `;
@@ -70,7 +68,7 @@ const Header = () => {
 
   return (
     <StyledContainer>
-      <StyledLink to="/">JAKUBŚMIAROWSKI.</StyledLink>
+      <StyledLink>JAKUBŚMIAROWSKI.</StyledLink>
       <StyledUl>
         <StyledLi>
           <StyledLink href="#about">About</StyledLink>

@@ -1,6 +1,5 @@
-import React, { useRef, useEffect, createRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import { reavealProjects } from "../../components/Animations/Animations";
 import shop from "../../assets/images/shop.jpg";
 import sudoku from "../../assets/images/sudoku.jpg";
 import zapp from "../../assets/images/music-zapp.jpg";
@@ -140,13 +139,6 @@ const StyledImage = styled.img`
 `;
 
 function ProjectsList() {
-  const elementsRef = useRef(projects.map(() => createRef()));
-
-  useEffect(() => {
-    const elements = elementsRef.current.map((el) => el.current);
-    reavealProjects(elements);
-  });
-
   return (
     <StyledContainer id="projects" className="section">
       <StyledHr></StyledHr>
@@ -154,8 +146,8 @@ function ProjectsList() {
         These are some of the projects I worked on
       </StyledParagraph>
       <StyledProjectsContainer>
-        {projects.map((item, index) => (
-          <StyledProject key={item.name} ref={elementsRef.current[index]}>
+        {projects.map((item) => (
+          <StyledProject id="project" key={item.name}>
             <StyledOverlay className="overlay">
               <StyledSpan className="project-btn">
                 <StyledLink

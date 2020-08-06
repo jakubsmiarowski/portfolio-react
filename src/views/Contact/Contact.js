@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { reavealProjects } from "../../components/Animations/Animations";
 import Form from "../../components/Form/Form";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -24,7 +23,6 @@ const StyledHr = styled.hr`
 `;
 const StyledParagraph = styled.p`
   margin-top: 30px;
-  color: #34495e;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
@@ -35,7 +33,6 @@ const StyledParagraph = styled.p`
   }
 `;
 const StyledContactInfo = styled.div`
-  color: black;
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
@@ -43,7 +40,6 @@ const StyledContactInfo = styled.div`
 `;
 const StyledContactSpan = styled.span`
   cursor: pointer;
-  color: black;
   font-weight: 400;
   margin: 0 32px;
   &:first-child {
@@ -89,13 +85,6 @@ const socials = [
 ];
 
 const Contact = () => {
-  //Dom node for animation
-  // let form = useRef(null);
-
-  // useEffect(() => {
-  //   reavealProjects(form);
-  // });
-
   return (
     <StyledContainer id="contact">
       <StyledHr></StyledHr>
@@ -105,7 +94,7 @@ const Contact = () => {
         <StyledContactInfo>
           <StyledParagraph>Or let me know here:</StyledParagraph>
           {socials.map((social) => (
-            <StyledContactSpan key={social.item}>
+            <StyledContactSpan id="socials" key={social.item}>
               <StyledLink
                 href={social.link}
                 target="_blank"

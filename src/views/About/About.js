@@ -1,10 +1,6 @@
-import React, { useEffect, useRef, createRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import jarzym from "../../assets/images/ja rzym.JPG";
-import {
-  reavealButton,
-  reavealList,
-} from "../../components/Animations/Animations";
 
 const about = [
   { id: 1, text: "1. I'm 28", emoji: null },
@@ -69,27 +65,32 @@ const about = [
   { id: 19, text: "19. Just kidding, doing this for fun", emoji: null },
   {
     id: 20,
-    text:
-      "20. I got my youger brother (14 years), he's pretty chill, wants be a goalkeeper",
-    emoji: "\u{1F945}",
-  },
-  {
-    id: 21,
-    text: "21. Tequila doesn't like me as much as I like Tequila",
+    text: "20. Favorite quote: 'I find your lack of faith... disturbing'",
     emoji: null,
   },
   {
+    id: 21,
+    text:
+      "21. I got my youger brother (14 years), he's pretty chill, wants be a goalkeeper",
+    emoji: "\u{1F945}",
+  },
+  {
     id: 22,
-    text: "22. Can't eat at home if I'm not watching a movie",
-    emoji: "\u{1F60B}",
+    text: "22. Tequila doesn't like me as much as I like Tequila",
+    emoji: null,
   },
   {
     id: 23,
-    text: "23. My dream? Being able to work and travel",
+    text: "23. Can't eat at home if I'm not watching a movie",
+    emoji: "\u{1F60B}",
+  },
+  {
+    id: 24,
+    text: "24. My dream? Being able to work and travel",
     emoji: "\u{2708}",
   },
-  { id: 24, text: "24. I hope to meet you", emoji: "\u{1F44B}" },
-  { id: 25, text: "25. And have a fantastic day!", emoji: "\u{1F609}" },
+  { id: 25, text: "25. I hope to meet you", emoji: "\u{1F44B}" },
+  { id: 26, text: "26. And have a fantastic day!", emoji: "\u{1F609}" },
 ];
 
 const StyledContainer = styled.div``;
@@ -109,7 +110,6 @@ const StyledParagraph = styled.p`
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  color: #34495e;
 `;
 const StyledUl = styled.ul`
   list-style: none;
@@ -117,7 +117,6 @@ const StyledUl = styled.ul`
   margin: 50px 0;
 `;
 const StyledLi = styled.li`
-  color: #34495e;
   font-size: 1rem;
   margin: 4px 0;
   @media (max-width: 1280px) {
@@ -153,17 +152,6 @@ const StyledImage = styled.img`
 `;
 
 function About() {
-  let photo = useRef(null);
-
-  const elementsRef = useRef(about.map(() => createRef()));
-
-  useEffect(() => {
-    const elements = elementsRef.current.map((el) => el.current);
-
-    reavealList(elements);
-    reavealButton(photo);
-  });
-
   return (
     <StyledContainer id="about" className="section">
       <StyledHr></StyledHr>
@@ -173,14 +161,14 @@ function About() {
       </StyledParagraph>
       <StyledGrid>
         <StyledUl>
-          {about.map((item, index) => (
-            <StyledLi ref={elementsRef.current[index]} key={item.id}>
+          {about.map((item) => (
+            <StyledLi id="list" key={item.id}>
               {item.text} {item.emoji}{" "}
             </StyledLi>
           ))}
         </StyledUl>
-        <StyledImageContainer ref={(el) => (photo = el)}>
-          <StyledImage src={jarzym}></StyledImage>
+        <StyledImageContainer>
+          <StyledImage id="photo" src={jarzym}></StyledImage>
         </StyledImageContainer>
       </StyledGrid>
     </StyledContainer>

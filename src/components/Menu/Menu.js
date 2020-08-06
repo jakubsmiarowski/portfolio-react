@@ -18,7 +18,7 @@ const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   display: none;
 
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     display: flex;
   }
   @media (max-width: 576px) {
