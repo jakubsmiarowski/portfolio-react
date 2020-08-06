@@ -14,7 +14,7 @@ const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   z-index: 10;
-  overflow: ${({ open }) => (open ? "hidden" : "auto")};
+  overflow: hidden;
   transition: transform 0.3s ease-in-out;
   display: none;
 
