@@ -8,7 +8,6 @@ const StyledMenu = styled.nav`
   background: #bdc3c7;
   transform: ${({ open }) => (open ? "translateX(10%)" : "translateX(100%)")};
   height: 100vh;
-  text-align: center;
   padding: 2rem;
   position: absolute;
   top: 0;
@@ -28,7 +27,7 @@ const StyledMenu = styled.nav`
   a {
     font-size: 2rem;
     text-transform: uppercase;
-    padding: 2rem 0;
+    padding: 2rem;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: #34495e;
@@ -37,7 +36,7 @@ const StyledMenu = styled.nav`
 
     @media (max-width: 576px) {
       font-size: 1.5rem;
-      text-align: center;
+      text-align: left;
     }
   }
 `;

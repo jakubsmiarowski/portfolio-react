@@ -96,7 +96,7 @@ const StyledProject = styled.div`
 const StyledOverlay = styled.div`
   position: absolute;
   transform: translate(-50%);
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 100%;
   display: flex;
