@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import jarzym from "../../assets/images/ja rzym.JPG";
+import ja from "../../assets/images/ja.jpg";
 
 const about = [
   { id: 1, text: "1. I'm 28", emoji: null },
@@ -174,7 +174,7 @@ function About() {
           ))}
         </StyledUl>
         <StyledImageContainer>
-          <StyledImage id="photo" src={jarzym}></StyledImage>
+          <StyledImage id="photo" src={ja}></StyledImage>
         </StyledImageContainer>
       </StyledGrid>
     </StyledContainer>
