@@ -115,6 +115,9 @@ const StyledUl = styled.ul`
   list-style: none;
   padding: 0;
   margin: 50px 0;
+  @media (max-width: 500px) {
+    margin: 100px 0;
+  }
 `;
 const StyledLi = styled.li`
   font-size: 1rem;
@@ -140,6 +143,9 @@ const StyledImageContainer = styled.div`
   margin-bottom: 50px;
   @media (max-width: 800px) {
     padding: 0;
+  }
+  @media (max-width: 500px) {
+    margin: 0;
   }
 `;
 const StyledImage = styled.img`

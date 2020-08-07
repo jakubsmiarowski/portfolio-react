@@ -9,11 +9,11 @@ const StyledMenu = styled.nav`
   transform: ${({ open }) => (open ? "translateX(10%)" : "translateX(100%)")};
   height: 100vh;
   padding: 2rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 10;
-  overflow: hidden;
+  overflow-y: hidden;
   transition: transform 0.3s ease-in-out;
   display: none;
 

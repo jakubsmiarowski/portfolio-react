@@ -136,7 +136,7 @@ function Home() {
       gsap.from(item, {
         duration: 0.9,
         opacity: 0,
-        delay: 1,
+        delay: 0.5,
         ease: "power3.out",
         x: -64,
         scrollTrigger: {
@@ -151,9 +151,6 @@ function Home() {
       delay: 0.9,
       ease: "power3.out",
       x: 64,
-      // stagger: {
-      //   amount: 0.15,
-      // },
       scrollTrigger: {
         trigger: photo,
         start: "top 90%",
@@ -163,7 +160,7 @@ function Home() {
       gsap.from(item, {
         duration: 0.9,
         opacity: 0,
-        delay: 0.9,
+        delay: 0.5,
         ease: "power3.out",
         y: 64,
         stagger: {
@@ -211,8 +208,10 @@ function Home() {
           sports enthusiast, currently working at Stanley Black & Decker.
         </StyledHeader>
         <StyledHeaderEmoji role="img" ref={(el) => (emoji = el)}>
-          &#127745; &#127754; &#128187; &#128247; &#127947; &#128692; &#128509;
-          &#128526;
+          <span role="img" aria-label="">
+            &#127745; &#127754; &#128187; &#128247; &#127947; &#128692;
+            &#128509; &#128526;
+          </span>{" "}
         </StyledHeaderEmoji>
         <StyledLink href={cvKuba} target="_blank" rel="noopener noreferrer">
           <StyledButton ref={(el) => (button = el)}>Resume.pdf</StyledButton>

@@ -22,14 +22,14 @@ const StyledHr = styled.hr`
   border-radius: 3%;
 `;
 const StyledParagraph = styled.p`
-  margin-top: 30px;
+  margin: 30px 0;
   font-size: 0.75rem;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
   @media (max-width: 575px) {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 `;
 const StyledContactInfo = styled.div`
@@ -57,7 +57,7 @@ const StyledContactSpan = styled.span`
       border-radius: 4px;
     }
   }
-  @media (max-width: 425px) {
+  @media (max-width: 571px) {
     margin: 0 16px;
   }
 `;
