@@ -5,6 +5,7 @@ import sudoku from "../../assets/images/sudoku.jpg";
 import zapp from "../../assets/images/music-zapp.jpg";
 import mentor from "../../assets/images/mentor.png";
 import favnote from "../../assets/images/favnote.jpg";
+import hangman from "../../assets/images/hangman.png";
 
 const projects = [
   {
@@ -36,6 +37,12 @@ const projects = [
     image: favnote,
     live: "https://jovial-lichterman-ebd600.netlify.com/",
     code: "https://github.com/jakubsmiarowski/favnote",
+  },
+  {
+    name: "Hangman",
+    image: hangman,
+    live: "https://adoring-carson-624a00.netlify.app/",
+    code: "https://github.com/jakubsmiarowski/hangman-react",
   },
 ];
 
