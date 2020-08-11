@@ -17,6 +17,7 @@ const StyledBurger = styled.button`
   z-index: 11;
   @media (max-width: 320px) {
     right: 2rem;
+    top: 4%;
   }
 
   &:focus {
