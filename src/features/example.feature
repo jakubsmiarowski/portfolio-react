@@ -1,4 +1,4 @@
-Feature First visit
+Feature #FeatureLine First visit
   Scenario: Display "main" page
     Given I visit "main" page
     And Title is "Kuba Śmiarowski"
